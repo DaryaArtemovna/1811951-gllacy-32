@@ -1,0 +1,246 @@
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/inter-400.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 900;
+  src: url("../fonts/inter-900.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/inter-700.woff2") format("woff2");
+  font-display: swap;
+}
+
+:root {
+  --color-basic-dark: #565c66;
+  --color-extra-dark: #2d3440;
+  --color-extra-light: #fcfcfc;
+  --color-basic-neutral: #b9b9b9;
+}
+
+body {
+  font-family: "Inter", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  color: var(--color-basic-dark);
+  min-height: 100vh;
+  background-color: #feafc3;
+}
+
+.title {
+  font-weight: 900;
+  font-size: 32px;
+  line-height: 46px;
+  color: var(--color-extra-dark);
+}
+
+.button {
+  font-weight: 700;
+  line-height: 20px;
+}
+
+.button--red {
+  color: var(--color-extra-light);
+}
+
+.field-label {
+  font-weight: 700;
+  line-height: 20px;
+  color: var(--color-extra-dark);
+}
+
+.field-input::placeholder {
+  line-height: 20px;
+  color: var(--color-basic-neutral);
+}
+
+.navigation-link {
+  line-height: 20px;
+  color: var(--color-extra-dark);
+  text-decoration: none;
+}
+
+.navigation-link--current {
+  color: var(--color-extra-light);
+}
+
+.interaction-phone {
+  line-height: 20px;
+  color: var(--color-extra-dark);
+  text-decoration: none;
+}
+
+.interaction-link {
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--color-extra-dark);
+  text-decoration: none;
+}
+
+.slide-name {
+  font-weight: 900;
+  font-size: 36px;
+  line-height: 46px;
+  color: var(--color-extra-dark);
+}
+
+.slide-description {
+  font-size: 18px;
+  line-height: 24px;
+  color: var(--color-extra-dark);
+}
+
+.offer-name {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 30px;
+  color: var(--color-extra-dark);
+}
+
+.offer-description {
+  color: var(--color-extra-dark);
+}
+
+.product-title {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  color: var(--color-extra-dark);
+}
+
+.product-price {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  color: var(--color-extra-dark);
+}
+
+.manufacture {
+  background-image: url("../img/manufacture-bg.jpg");
+  background-color: #008080;
+  background-repeat: repeat;
+  background-size: cover;
+  border-radius: 8px;
+}
+
+.new {
+  background-image: url("../img/blog-bg.jpg");
+  background-color: #ffffff;
+  background-repeat: no-repeat;
+  border-radius: 16px;
+}
+
+.new-info {
+  line-height: 20px;
+}
+
+.new-link {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 30px;
+  color: var(--color-extra-dark);
+  text-decoration: none;
+}
+
+.subscription {
+  background-image: url("../img/subscription-bg.jpg");
+  background-color: #008080;
+  background-repeat: repeat;
+  border-radius: 16px;
+}
+
+.connection {
+  background-image: url("../img/connection-bg.jpg");
+  background-color: #008080;
+  background-repeat: no-repeat;
+  border-radius: 16px;
+}
+
+.contacts {
+  background-image: url("../img/contacts-bg.jpg");
+  background-color: #008080;
+  background-repeat: no-repeat;
+  border-radius: 16px;
+}
+
+.office-contact {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  color: var(--color-extra-dark);
+  text-decoration: none;
+}
+
+.office-time {
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.office-feedback {
+  text-decoration: none;
+}
+
+.info-link {
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--color-extra-dark);
+  text-decoration: none;
+}
+
+.info-link--bold {
+  font-weight: 700;
+}
+
+.author-about {
+  font-size: 12px;
+  line-height: 16px;
+  color: var(--color-extra-dark);
+}
+
+.author-link {
+  color: var(--color-extra-dark);
+}
+
+.breadcrumbs-link {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--color-extra-dark);
+}
+
+.breadcrumbs-link:not([href]) {
+  text-decoration: none;
+}
+
+.sorting-type {
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--color-extra-dark);
+}
+
+.select-control {
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--color-extra-dark);
+}
+
+.sorting-type-submit {
+  font-weight: 700;
+}
+
+.pagination-button {
+  line-height: 20px;
+  color: var(--color-extra-dark);
+}
