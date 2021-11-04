@@ -52,6 +52,7 @@
   --color-navigation: #fcfcfc80;
   --color-pagination: #fcfcfc66;
   --color-disabled: #b9b9b94d;
+  --color-social: #fcfcfc33;
 }
 
 body {
@@ -166,9 +167,9 @@ body {
   width: 16px;
   height: 16px;
   border-radius: 50%;
-  border-top: 2px solid rgba(255, 255, 255, 0.2);
-  border-right: 2px solid rgba(255, 255, 255, 0.2);
-  border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+  border-top: 2px solid #ffffff33;
+  border-right: 2px solid #ffffff33;
+  border-bottom: 2px solid #ffffff33;
   animation: spinner 1.5s infinite linear;
 }
 .button--process::before {
@@ -397,7 +398,7 @@ body {
   height: 24px;
   text-decoration: none;
   border-radius: 50%;
-  outline: 4px solid var(--color-ghost);
+  outline: 2px solid var(--color-social);
   position: relative;
   transition: all 0.3s;
   cursor: pointer;
@@ -820,7 +821,7 @@ body {
 .field-tooltip {
   display: none;
   position: absolute;
-  top: 78%;
+  top: 60%;
   left: 114%;
   transform: translateY(-50%);
   font-size: 12px;
@@ -837,14 +838,14 @@ body {
 .field-tooltip::before {
   content: "";
   position: absolute;
-  top: 10px;
+  top: 45%;
   left: -6px;
   width: 10px;
   height: 10px;
   background-color: var(--color-extra-light);
   border-left: 1px solid var(--color-basic-neutral);
   border-top: 1px solid var(--color-basic-neutral);
-  transform: rotate(-45deg);
+  transform: translateY(-50%) rotate(-45deg);
 }
 
 .field-label--help::before {
@@ -874,7 +875,7 @@ body {
 
 .contacts-content {
   background-image: url("../img/contacts-bg.jpg");
-  background-color: #008080;
+  background-color: #008080 cover;
   background-repeat: no-repeat;
   border-radius: 16px;
   padding: 64px;
