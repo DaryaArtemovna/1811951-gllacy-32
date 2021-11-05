@@ -82,67 +82,77 @@
               <option value="expensive">Сначала дорогое</option>
             </select>
           </div>
-          <fieldset class="catalog-filter-group">
-            <div class="price">
-              <p>Цена:
-                <label class="catalog-filter-label">
-                  <input class="catalog-filter-input" type="text" name="min-price" value="100">₽-
-                </label>
-                <label class="catalog-filter-label">
-                  <input class="catalog-filter-input" type="text" name="max-price" value="500">₽
-                </label>
-              </p>
-            </div>
-            <div class="range">
-              <button class="range-toggle toggle-min" type="button" aria-label="Изменить минимальную цену"></button>
-              <button class="range-toggle toggle-max" type="button" aria-label="Изменить максимальную цену"></button>
-            </div>
-          </fieldset>
-          <fieldset class="catalog-filter-group">
-            <legend class="catalog-filter-title">Жирность:</legend>
-            <ul class="catalog-filter-list list-default">
-              <li class="catalog-filter-item">
-                <label class="control" for="zero">0%</label>
-                <input class="visually-hidden" type="radio" name="product-group" value="0" id="zero">
-              </li>
-              <li class="catalog-filter-item">
-                <label class="control" for="ten">10%</label>
-                <input class="visually-hidden" type="radio" name="product-group" value="10" id="ten" checked>
-              </li>
-              <li class="catalog-filter-item">
-                <label class="control" for="upToThirty">до 30%</label>
-                <input class="visually-hidden" type="radio" name="product-group" value="up-to-30" id="upToThirty">
-              </li>
-              <li class="catalog-filter-item">
-                <label class="control" for="overThirty">свыше 30%</label>
-                <input class="visually-hidden" type="radio" name="product-group" value="over-30" id="overThirty">
-              </li>
-            </ul>
-          </fieldset>
+          <div class="filter-field">
+            <fieldset class="catalog-filter-group">
+              <div class="price">
+                <p>Цена:
+                  <label class="catalog-filter-label">
+                    <input class="catalog-filter-input" type="text" name="min-price" value="100">₽-
+                  </label>
+                  <label class="catalog-filter-label">
+                    <input class="catalog-filter-input" type="text" name="max-price" value="500">₽
+                  </label>
+                </p>
+              </div>
+              <div class="range">
+                <div class="price-field">
+                  <div class="price-line">
+                    <div class="price-line price-line--black"></div>
+                  </div>
+                  <button class="range-toggle toggle-min" type="button" aria-label="Изменить минимальную цену"></button>
+                  <button class="range-toggle toggle-max" type="button"
+                    aria-label="Изменить максимальную цену"></button>
+                </div>
+              </div>
+            </fieldset>
+          </div>
+          <div class="filter-field">
+            <fieldset class="catalog-filter-group">
+              <legend class="catalog-filter-title">Жирность:</legend>
+              <ul class="catalog-filter-list list-default">
+                <li class="catalog-filter-item">
+                  <input class="visually-hidden" type="radio" name="product-group" value="0" id="zero">
+                  <label class="control" for="zero">0%</label>
+                </li>
+                <li class="catalog-filter-item">
+                  <input class="visually-hidden" type="radio" name="product-group" value="10" id="ten" checked>
+                  <label class="control" for="ten">10%</label>
+                </li>
+                <li class="catalog-filter-item">
+                  <input class="visually-hidden" type="radio" name="product-group" value="up-to-30" id="upToThirty">
+                  <label class="control" for="upToThirty">до 30%</label>
+                </li>
+                <li class="catalog-filter-item">
+                  <input class="visually-hidden" type="radio" name="product-group" value="over-30" id="overThirty">
+                  <label class="control" for="overThirty">свыше 30%</label>
+                </li>
+              </ul>
+            </fieldset>
+          </div>
         </div>
         <div class="filter-footer">
           <fieldset class="catalog-filter-group">
-            <legend class="catalog-filter-title">Наполнители</legend>
+            <legend class="catalog-filter-title">Наполнители:</legend>
             <ul class="catalog-filter-list list-default">
               <li class="catalog-filter-item">
-                <label class="control" for="chocolate">шоколадные</label>
                 <input class="visually-hidden" type="checkbox" name="chocolate" id="chocolate" checked>
+                <label class="choice" for="chocolate">шоколадные</label>
               </li>
               <li class="catalog-filter-item">
-                <label class="control" for="powdered-sugar">сахарные присыпки</label>
                 <input class="visually-hidden" type="checkbox" name="powdered-sugar" id="powdered-sugar" checked>
+                <label class="choice" for="powdered-sugar">сахарные присыпки</label>
               </li>
               <li class="catalog-filter-item">
-                <label class="control" for="fruits">фрукты</label>
                 <input class="visually-hidden" type="checkbox" name="fruits" id="fruits">
+                <label class="choice" for="fruits">фрукты</label>
               </li>
               <li class="catalog-filter-item">
-                <label class="control" for="syrups">сиропы</label>
                 <input class="visually-hidden" type="checkbox" name="syrups" id="syrups">
+                <label class="choice" for="syrups">сиропы</label>
               </li>
               <li class="catalog-filter-item">
-                <label class="control" for="jams">джемы</label>
                 <input class="visually-hidden" type="checkbox" name="jams" id="jams">
+                <label class="choice" for="jams">джемы</label>
               </li>
             </ul>
           </fieldset>
@@ -323,13 +333,13 @@
       </h2>
       <a class="show-more button" href="#">Показать еще</a>
       <div class="pagination">
-        <a class="pagination-button pagination-button--early" href="#" aria-label="Предыдущая страница"></a>
+        <a class="pagination-arrow pagination-arrow--early" aria-label="Предыдущая страница"></a>
         <a class="pagination-button" aria-label="Перейти к первой странице">1</a>
         <a class="pagination-button" href="#" aria-label="Перейти ко второй транице">2</a>
         <a class="pagination-button" href="#" aria-label="Перейти к третьей странице">3</a>
         <a class="pagination-button" href="#" aria-label="Перейти к четвертой странице">4</a>
         <a class="pagination-button" href="#" aria-label="Перейти к пятой странице">5</a>
-        <a class="pagination-button pagination-button--next" href="#" aria-label="Следующая страница"></a>
+        <a class="pagination-arrow pagination-arrow--next" href="#" aria-label="Следующая страница"></a>
       </div>
     </section>
   </main>
@@ -337,8 +347,10 @@
   <footer class="page-footer container">
     <div class="socials">
       <a class="socials-link socials-link--vk" href="https://twitter.com/htmlacademy_ru" aria-label="Вконтакте"></a>
-      <a class="socials-link socials-link--facebook" href="https://www.facebook.com/htmlacademy" aria-label="Фейсбук"></a>
-      <a class="socials-link socials-link--instagram" href="https://www.instagram.com/htmlacademy/" aria-label="Инстаграм"></a>
+      <a class="socials-link socials-link--facebook" href="https://www.facebook.com/htmlacademy"
+        aria-label="Фейсбук"></a>
+      <a class="socials-link socials-link--instagram" href="https://www.instagram.com/htmlacademy/"
+        aria-label="Инстаграм"></a>
     </div>
     <ul class="info list-default">
       <li class="info-item">

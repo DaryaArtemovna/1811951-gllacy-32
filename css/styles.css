@@ -172,6 +172,7 @@ body {
   border-bottom: 2px solid #ffffff33;
   animation: spinner 1.5s infinite linear;
 }
+
 .button--process::before {
   border-left: 2px solid var(--color-extra-light);
 }
@@ -184,6 +185,7 @@ body {
   0% {
     transform: translateY(-50%) rotate(0deg);
   }
+
   100% {
     transform: translateY(-50%) rotate(360deg);
   }
@@ -875,7 +877,8 @@ body {
 
 .contacts-content {
   background-image: url("../img/contacts-bg.jpg");
-  background-color: #008080 cover;
+  background-color: #008080;
+  background-size: cover;
   background-repeat: no-repeat;
   border-radius: 16px;
   padding: 64px;
@@ -1002,6 +1005,8 @@ body {
 }
 
 .breadcrumbs-link {
+  position: relative;
+  text-decoration: none;
   display: block;
   font-weight: 700;
   font-size: 14px;
@@ -1009,8 +1014,14 @@ body {
   color: var(--color-extra-dark);
 }
 
-.breadcrumbs-link:not([href]) {
-  text-decoration: none;
+.breadcrumbs-link[href]::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: var(--color-basic-dark);
 }
 
 .inner-header-title {
@@ -1031,11 +1042,214 @@ body {
 .filter-header {
   display: flex;
   flex-wrap: wrap;
+  margin-bottom: 12px;
+}
+
+.filter-field:not(:last-child) {
+  margin-right: 20px;
+}
+
+.filter-label {
+  display: block;
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--color-extra-dark);
+  margin: 0 0 8px 16px;
+}
+
+.select-control {
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--color-extra-dark);
+  width: 195px;
+  padding: 6px 27px 8px 14px;
+  border-radius: 20px;
+  appearance: none;
+  background: url("../img/catalog/select-arrow.svg") no-repeat 91.5% 50% / 12px 10px var(--color-ghost);
+  border: 2px solid transparent;
+}
+
+.select-control:hover {
+  background-color: var(--color-navigation);
+}
+.select-control:focus {
+  background-color: var(--color-pagination);
+  border-color: var(--color-extra-light);
+}
+
+.catalog-filter-input {
+  width: 26px;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+}
+
+.range {
+  background-color: var(--color-ghost);
+  width: 200px;
+  height: 40px;
+  padding: 9px 15px;
+  border-radius: 20px;
+}
+
+.price p {
+  margin: 0 0 7px 19px;
+}
+
+.price-field {
+  position: relative;
+  height: 100%;
+}
+
+.price-line {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #565c664d;
+}
+
+.price-line--black {
+  left: 33px;
+  width: 45%;
+  background-color: #565c66;
+}
+
+.range-toggle {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 16px;
+  height: 16px;
+  border: none;
+  padding: 0;
+  border-radius: 50%;
+  background-image: radial-gradient(var(--color-extra-light) 0, var(--color-extra-light) 2px, var(--color-extra-dark) 2px, var(--color-extra-dark) 100%);
+}
+
+.toggle-min {
+  left: 16%;
+}
+
+.toggle-max {
+  left: 59%;
+}
+
+.range-toggle:hover {
+  background-image: radial-gradient(var(--color-extra-dark) 0, var(--color-extra-dark) 2px, var(--color-extra-light) 2px, var(--color-extra-light) 100%);
+}
+
+.range-toggle:focus {
+  background-image: radial-gradient(var(--color-extra-dark) 0, var(--color-extra-dark) 2px, var(--color-extra-light) 2px, var(--color-extra-light) 7px, var(--color-extra-dark) 7px, var(--color-extra-dark) 100%);
+}
+
+.range-toggle:active {
+  background-image: radial-gradient(var(--color-extra-dark) 0, var(--color-extra-dark) 100%);
+}
+
+.catalog-filter-title {
+  margin: 0 0 6px 20px;
+}
+
+.catalog-filter-list {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: var(--color-ghost);
+  border-radius: 20px;
+  padding: 8px 19px;
+}
+
+.catalog-filter-item input:checked~.control::before {
+  background-image: radial-gradient(var(--color-extra-dark) 0, var(--color-extra-dark) 3px, transparent 3px, transparent 100%);
+  ;
+}
+
+.catalog-filter-item:not(:last-child) {
+  margin-right: 16px;
+}
+
+.control {
+  position: relative;
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--color-extra-dark);
+  padding-left: 25px;
+}
+
+.control::before {
+  content: "";
+  position: absolute;
+  transform: translateY(-50%);
+  top: 50%;
+  left: 0;
+  width: 16px;
+  height: 16px;
+  border: 1px solid var(--color-extra-dark);
+  border-radius: 50%;
+}
+
+.catalog-filter-item input:hover:not(.catalog-filter-item input:disabled):not(.catalog-filter-item input:checked)~.control::before {
+  background-image: none;
+  border-color: var(--color-extra-light);
+}
+
+.catalog-filter-item input:checked~.control:hover::before {
+  background-image: radial-gradient(var(--color-extra-light) 0, var(--color-extra-light) 3px, transparent 3px, transparent 100%);
+  border-color: var(--color-extra-light);
+}
+
+.catalog-filter-item input:disabled~.control::before,
+.catalog-filter-item input:disabled:checked~.control::before {
+  opacity: 0.4;
+}
+
+.choice {
+  position: relative;
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--color-extra-dark);
+  padding-left: 25px;
+}
+
+.choice::before {
+  content: "";
+  position: absolute;
+  transform: translateY(-50%);
+  top: 50%;
+  left: 0;
+  width: 16px;
+  height: 16px;
+  mask: url("../img/catalog/checkbox-empty.svg") no-repeat center/cover;
+  -webkit-mask: url("../img/catalog/checkbox-empty.svg") no-repeat center/cover;
+  background-color: var(--color-extra-dark);
+}
+
+.catalog-filter-item input:checked~.choice::before {
+  mask: url("../img/catalog/checkbox-checked.svg") no-repeat center/cover;
+  -webkit-mask: url("../img/catalog/checkbox-checked.svg") no-repeat center/cover;
+  background-color: var(--color-extra-dark);
+}
+
+.catalog-filter-item input:hover:not(.catalog-filter-item input:disabled)~.choice::before,
+.catalog-filter-item input:checked~.choice:hover::before {
+  background-color: var(--color-extra-light);
+}
+
+.catalog-filter-item input:disabled~.choice::before,
+.catalog-filter-item input:disabled:checked~.choice::before {
+  opacity: 0.4;
 }
 
 .filter-footer {
   display: flex;
   flex-wrap: wrap;
+  align-items: flex-end;
+}
+
+.filter-footer .catalog-filter-list {
+  margin-right: 20px;
 }
 
 .sorting-type {
@@ -1059,6 +1273,24 @@ body {
   background-color: var(--color-ghost);
   border: 2px solid var(--color-extra-light);
   border-radius: 20px;
+  width: 194px;
+  padding: 6px;
+}
+
+.sorting-type-submit:hover {
+  background-color: var(--color-extra-light);
+  outline: 2px solid var(--color-ghost);
+}
+
+.sorting-type-submit:focus {
+  background-color: var(--color-ghost);
+  outline: 2px solid #2d3440;
+}
+
+.sorting-type-submit:disabled {
+  background-color: var(--color-ghost);
+  outline: 2px solid var(--color-extra-light);
+  opacity: 0.4;
 }
 
 .catalog {
@@ -1078,7 +1310,7 @@ body {
 }
 
 .show-more {
-  margin: 0 auto;
+  margin: 0 auto 0 42%;
 }
 
 .pagination-button {
@@ -1096,48 +1328,42 @@ body {
   border-radius: 50%;
 }
 
-.pagination-button:not(:last-child),
-.pagination-button:not(:first-child) {
-  margin-right: 16px;
+.pagination-button:not(:last-child) {
+  margin-left: 3px;
 }
 
-.pagination-button:not(:last-child):hover,
-.pagination-button:not(:first-child):hover {
-  background-color: var(--color-pagination);
-}
-
-.pagination-button:not(:last-child):focus,
-.pagination-button:not(:first-child):focus {
-  background-color: var(--color-pagination);
-}
-
-.pagination-button:not(:last-child):active {
+.pagination-button:not([href]) {
   background-color: var(--color-extra-light);
 }
 
-.pagination-button--early,
-.pagination-button--next {
-  width: 16px;
-  height: 16px;
-  background: url("../img/catalog/icon-arrow.svg") no-repeat center center;
-  background-size: 16px 16px;
+.pagination-button:hover {
+  background-color: var(--color-pagination);
 }
 
-.pagination-button--early {
-  transform: rotate(180deg);
+.pagination-button:focus {
+  background-color: var(--color-pagination);
+}
+
+.pagination-button:active {
+  background-color: var(--color-extra-light);
+}
+
+.pagination-arrow {
+  width: 12px;
+  height: 12px;
+  background: url("../img/catalog/icon-arrow.svg") no-repeat center center;
+  background-size: 12px 12px;
+}
+
+.pagination-arrow:not([href]) {
   opacity: 0.2;
 }
 
-.pagination-button:not([href])::before {
-  background-color: var(--color-extra-light);
-  border-radius: 50%;
-  background-color: var(--color-extra-light);
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 24px;
-  height: 24px;
-  z-index: -1;
+.pagination-arrow--early {
+  transform: rotate(180deg);
+  margin-right: 12px;
+}
+
+.pagination-arrow--next {
+  margin-left: 18px;
 }
