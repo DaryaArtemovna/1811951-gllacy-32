@@ -445,6 +445,7 @@ body {
 
 .socials-link:focus {
   background-color: var(--color-extra-dark);
+  outline: 2px solid var(--color-extra-dark);
 }
 
 .presents {
