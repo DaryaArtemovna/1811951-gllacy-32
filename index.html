@@ -14,8 +14,29 @@
         <img src="img/header/logo.svg" width="137" height="56" alt="Логотип глейси">
       </a>
       <ul class="navigation-list list-default">
-        <li class="navigation-item">
+        <li class="navigation-item navigation-item--menu">
           <a class="navigation-link" href="catalog.html">Каталог</a>
+          <div class="popup popup--catalog">
+            <div class="popup-content">
+              <ul class="catalog-list list-default">
+                <li class="catalog-item">
+                  <a class="catalog-link catalog-link--new" href="#">Новинки</a>
+                </li>
+                <li class="catalog-item">
+                  <a class="catalog-link" href="#">Сливочное</a>
+                </li>
+                <li class="catalog-item">
+                  <a class="catalog-link catalog-link--active" href="#">Щербеты</a>
+                </li>
+                <li class="catalog-item">
+                  <a class="catalog-link" href="#">Фруктовый лед</a>
+                </li>
+                <li class="catalog-item">
+                  <a class="catalog-link" href="#">Мелорин</a>
+                </li>
+              </ul>
+            </div>
+          </div>
         </li>
         <li class="navigation-item">
           <a class="navigation-link" href="#">Доставка и оплата</a>
@@ -28,83 +49,198 @@
         <a class="interaction-phone" href="tel:+78005558628">+7 800 555-86-28</a>
         <div class="interaction-item">
           <a class="interaction-link interaction-link--search" href="#" aria-label="Поиск"></a>
+          <div class="popup">
+            <div class="popup-content">
+              <form class="search-form" action="https://echo.htmlacademy.ru/" method="GET">
+                <div class="field">
+                  <label class="field-label visually-hidden" for="search">Поиск</label>
+                  <input class="field-input field-input--search" type="search" placeholder="Поиск по сайту" id="search"
+                    name="search">
+                  <button class="cross-button cross-button--search" type="button">
+                    <span></span>
+                    <span></span>
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
         </div>
         <div class="interaction-item">
           <a class="interaction-link interaction-link--login" href="#">Вход</a>
+          <div class="popup">
+            <div class="popup-content">
+              <div class="login">
+                <h3 class="login-title title">Личный кабинет</h3>
+                <form class="login-form" action="https://echo.htmlacademy.ru/" method="GET">
+                  <div class="field">
+                    <label class="field-label visually-hidden" for="login">Email</label>
+                    <input class="field-input" type="email" placeholder="email@example.com
+                    " id="login" name="login">
+                  </div>
+                  <div class="field">
+                    <label class="field-label visually-hidden" for="password">Пароль</label>
+                    <input class="field-input" type="password" placeholder="••••••" id="password" name="password">
+                  </div>
+                  <div class="login-footer">
+                    <button class="button button--red" type="button">Войти</button>
+                    <div class="check-in">
+                      <a href="#">Забыли пароль?</a>
+                      <a href="#">Регистрация</a>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
         </div>
         <div class="interaction-item">
           <a class="interaction-link interaction-link--cart" href="#" aria-label="Корзина">Пусто</a>
+          <div class="popup">
+            <div class="popup-content">
+              <div class="cart cart--empty">
+                <div class="cart-text">
+                  <p>Ваша корзина пока пуста</p>
+                </div>
+                <div class="cart-product">
+                  <h3 class="title cart-title">Корзина</h3>
+                  <ul class="cart-list list-default">
+                    <li class="cart-item">
+                      <div class="goods">
+                        <div class="goods-content">
+                          <img src="img/catalog/goods-1.jpg" alt="Малинка" width="46" height="48">
+                          <div class="goods-text">
+                            <p>Малинка</p>
+                            <p>1 кг х 310 ₽</p>
+                          </div>
+                        </div>
+                        <p class="goods-price">310 ₽</p>
+                        <button class="cross-button goods-button" type="button">
+                          <span></span>
+                          <span></span>
+                        </button>
+                      </div>
+                    </li>
+                    <li class="cart-item">
+                      <div class="goods">
+                        <div class="goods-content">
+                          <img src="img/catalog/goods-4.jpg" alt="Бабл-гам" width="46" height="48">
+                          <div class="goods-text">
+                            <p>Бабл-гам</p>
+                            <p>1,5 кг х 320 ₽</p>
+                          </div>
+                        </div>
+                        <p class="goods-price">480 ₽</p>
+                        <button class="cross-button goods-button" type="button">
+                          <span></span>
+                          <span></span>
+                        </button>
+                      </div>
+                    </li>
+                  </ul>
+                  <div class="cart-footer">
+                    <a class="button button--red" href="#">Оформить заказ</a>
+                    <p>Итого:<span> 790</span> ₽</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </nav>
   </header>
 
-
   <main class="main-index">
     <h1 class="visually-hidden">
       Магазин мороженного Глейси
     </h1>
-    <section class="promo container">
+    <section class="promo">
       <h2 class="visually-hidden">
         Промо акция
       </h2>
-      <div class="slide slide--active">
-        <div class="slide-text">
-          <p class="slide-name">Нежный пломбир с&nbsp;клубничным джемом</p>
-          <p class="slide-description">Натуральное мороженое из свежих сливок и&nbsp;молока с вкуснейшим клубничным
-            джемом –
-            это идеальный десерт для всей семьи.</p>
-          <a class="slide-button button" href="#">
-            Заказать
-          </a>
+      <div class="container">
+        <div class="slider-content">
+          <div class="slider-showroom">
+            <div class="slider-frontline">
+              <div class="slide slide--strawberry slide--active">
+                <div class="slide-text">
+                  <p class="slide-name">Нежный пломбир с&nbsp;клубничным джемом</p>
+                  <p class="slide-description">Натуральное мороженое из свежих сливок и&nbsp;молока с вкуснейшим
+                    клубничным
+                    джемом –
+                    это идеальный десерт для всей семьи.</p>
+                  <a class="slide-button button" href="#">
+                    Заказать
+                  </a>
+                </div>
+                <div class="slide-img">
+                  <img src="img/promo-strawberry.png" width="306" height="507" alt="Пломбир с клубничным джемом">
+                </div>
+              </div>
+              <div class="slide slide--banana">
+                <div class="slide-text">
+                  <p class="slide-name">Сливочное мороженое со вкусом банана</p>
+                  <p class="slide-description">Сливочное мороженое с ярким банановым вкусом подарит вам свежесть и
+                    наслаждение
+                    даже в самый жаркий летний день.</p>
+                  <a class="slide-button button" href="#">
+                    Заказать
+                  </a>
+                </div>
+                <div class="slide-img">
+                  <img src="img/promo-banana.png" width="306" height="507" alt="Пломбир со вкусом банана">
+                </div>
+              </div>
+              <div class="slide slide--marshmallow">
+                <div class="slide-text">
+                  <p class="slide-name">Карамельный пломбир с маршмеллоу</p>
+                  <p class="slide-description">Необычный сладкий дессерт с карамельный топпингом и кусочками зефира
+                    завоюет
+                    сердца сладкоежек всех возрастов.</p>
+                  <a class="slide-button button" href="#">
+                    Заказать
+                  </a>
+                </div>
+                <div class="slide-img">
+                  <img src="img/promo-marshmallow.png" width="306" height="507" alt="Карамельный пломбир с маршмеллоу">
+                </div>
+              </div>
+            </div>
+            <div class="slider-cover">
+              <article class="slider-preview slider-preview--inactive">
+                <img src="img/slider-strawberry.png" width="66" height="150" alt="Клубоничка">
+              </article>
+              <article class="slider-preview">
+                <img src="img/slider-banana.png" width="66" height="150" alt="Бабананчик">
+              </article>
+              <article class="slider-preview">
+                <img src="img/slider-marshmallow.png" width="66" height="150" alt="Маршамэллоу">
+              </article>
+            </div>
+          </div>
+          <div class="promo-buttons">
+            <button class="promo-button promo-button--left" id="buttonSliderLeft" type="button"
+              aria-label="Левая прокрутка мороженных"></button>
+            <button class="promo-button promo-button--right" id="buttonSliderRight" type="button"
+              aria-label="Правая прокрутка мороженных"></button>
+          </div>
         </div>
-        <div class="slide-img">
-          <img src="img/promo-strawberry.png" width="306" height="507" alt="Пломбир с клубничным джемом">
+        <div class="slider-footer">
+          <div class="slider-switcher">
+            <button class="slider-switch slider-switch--active" id="switch-1" type="button"></button>
+            <button class="slider-switch" type="button" id="switch-2"></button>
+            <button class="slider-switch" type="button" id="switch-3"></button>
+          </div>
+          <div class="socials">
+            <a class="socials-link socials-link--vk" href="https://twitter.com/htmlacademy_ru"
+              aria-label="Вконтакте"></a>
+            <a class="socials-link socials-link--facebook" href="https://www.facebook.com/htmlacademy"
+              aria-label="Фейсбук"></a>
+            <a class="socials-link socials-link--instagram" href="https://www.instagram.com/htmlacademy/"
+              aria-label="Инстаграм"></a>
+          </div>
         </div>
       </div>
-      <div class="slide">
-        <div class="slide-text">
-          <p class="slide-name">Сливочное мороженое со вкусом банана</p>
-          <p class="slide-description">Сливочное мороженое с ярким банановым вкусом подарит вам свежесть и наслаждение
-            даже в самый жаркий летний день.</p>
-          <a class="slide-button button" href="#">
-            Заказать
-          </a>
-        </div>
-        <div class="slide-img">
-          <img src="img/promo-banana.png" width="306" height="507" alt="Пломбир со вкусом банана">
-        </div>
-      </div>
-      <div class="slide">
-        <div class="slide-text">
-          <p class="slide-name">Карамельный пломбир с маршмеллоу</p>
-          <p class="slide-description">Необычный сладкий дессерт с карамельный топпингом и кусочками зефира завоюет
-            сердца сладкоежек всех возрастов.</p>
-          <a class="slide-button button" href="#">
-            Заказать
-          </a>
-        </div>
-        <div class="slide-img">
-          <img src="img/promo-marshmallow.png" width="306" height="507" alt="Карамельный пломбир с маршмеллоу">
-        </div>
-      </div>
-      <div class="promo-buttons">
-        <button class="promo-button promo-button--left" type="button" aria-label="Левая прокрутка мороженных"></button>
-        <button class="promo-button promo-button--right" type="button"
-          aria-label="Правая прокрутка мороженных"></button>
-      </div>
-      <div class="promo-bottom">
-        <div class="pagination">
-          <button class="pagination-button pagination-button--active" type="button"
-            aria-label="Перейти к первому слайду"></button>
-          <button class="pagination-button" type="button" aria-label="Перейти ко второму слайду"></button>
-          <button class="pagination-button" type="button" aria-label="Перейти к третьему слайду"></button>
-        </div>
-        <div class="socials">
-          <a class="socials-link socials-link--vk" href="https://twitter.com/htmlacademy_ru" aria-label="Вконтакте"></a>
-          <a class="socials-link socials-link--facebook" href="https://www.facebook.com/htmlacademy" aria-label="Фейсбук"></a>
-          <a class="socials-link socials-link--instagram" href="https://www.instagram.com/htmlacademy/" aria-label="Инстаграм"></a>
-        </div>
       </div>
     </section>
 
@@ -299,7 +435,7 @@
                 </label>
                 <input class="field-input" type="text" placeholder="ул. Большая Конюшенная, 19/8" id="location"
                   name="adress">
-                  <span class="field-info">Подпись</span>
+                <span class="field-info">Подпись</span>
               </li>
             </ul>
             <button class="button button--red feedback-submit" type="submit">
@@ -336,8 +472,10 @@
   <footer class="page-footer container">
     <div class="socials">
       <a class="socials-link socials-link--vk" href="https://twitter.com/htmlacademy_ru" aria-label="Вконтакте"></a>
-      <a class="socials-link socials-link--facebook" href="https://www.facebook.com/htmlacademy" aria-label="Фейсбук"></a>
-      <a class="socials-link socials-link--instagram" href="https://www.instagram.com/htmlacademy/" aria-label="Инстаграм"></a>
+      <a class="socials-link socials-link--facebook" href="https://www.facebook.com/htmlacademy"
+        aria-label="Фейсбук"></a>
+      <a class="socials-link socials-link--instagram" href="https://www.instagram.com/htmlacademy/"
+        aria-label="Инстаграм"></a>
     </div>
     <ul class="info list-default">
       <li class="info-item">
@@ -361,6 +499,47 @@
       </p>
     </div>
   </footer>
+
+  <div class="modal" id="modalContacts">
+    <div class="modal-window">
+      <button class="cross-button cross-button--modal" type="button">
+        <span></span>
+        <span></span>
+      </button>
+      <div class="modal-content">
+        <p class="modal-title">Мы обязательно ответим вам!</p>
+        <form class="form" action="https://echo.htmlacademy.ru/" method="GET">
+          <ul class="modal-list list-default">
+            <li class="field">
+              <label class="field-label visually-hidden" for="modal-name">
+                Имя и фамилия
+              </label>
+              <input class="field-input" type="text" placeholder="Имя и фамилия" id="modal-name" name="modal-name">
+            </li>
+            <li class="field">
+              <label class="field-label visually-hidden" for="modal-email">
+                email@example.com
+              </label>
+              <input class="field-input" type="email" placeholder="email@example.com" id="modal-email"
+                name="modal-email">
+            </li>
+            <li class="field">
+              <label class="field-label visually-hidden" for="modal-text">
+                В свободной форме
+              </label>
+              <textarea class="field-input field-input--text" type="text" placeholder="В свободной форме"
+                id="modal-text" name="modal-text"></textarea>
+            </li>
+          </ul>
+          <button class="button button--red modal-submit" type="submit">
+            Отправить
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/script.js"></script>
 </body>
 
 </html>
