@@ -287,7 +287,7 @@ body {
   line-height: 20px;
   color: var(--color-extra-dark);
   text-decoration: none;
-  margin-right: 18px;
+  margin-right: 17px;
 }
 
 .interaction-item,
@@ -436,6 +436,7 @@ body {
 }
 
 .cross-button--search {
+  display: none;
   position: absolute;
   top: 50%;
   right: 17px;
@@ -460,13 +461,17 @@ body {
   transform: translate(-50%, -50%) rotate(-45deg);
 }
 
+.cross-button--show {
+  display: block;
+}
+
 .cross-button--search:hover span,
 .cross-button--search:focus span {
   opacity: 1;
 }
 
 .interaction-item:not(:last-child) {
-  margin-right: 18px;
+  margin-right: 17.5px;
 }
 
 .interaction-link {
@@ -659,6 +664,7 @@ body {
 
 .slider-showroom {
   display: flex;
+  margin-bottom: 3px;
 }
 
 .slide {
@@ -733,7 +739,7 @@ body {
   color: var(--color-extra-dark);
   max-width: 419px;
   margin: 0;
-  margin-bottom: 58px;
+  margin-bottom: 48px;
 }
 
 .slide-button {
@@ -742,7 +748,7 @@ body {
 
 .slide-img {
   position: relative;
-  width: 350px;
+  width: 344px;
   padding-top: 20px;
 }
 
@@ -756,9 +762,9 @@ body {
 .slide-img::before {
   position: absolute;
   content: "";
-  top: 50%;
+  top: 53%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-49%, -50%);
   border-radius: 50%;
   width: 312px;
   height: 312px;
@@ -822,7 +828,7 @@ body {
 }
 
 .promo-button:not(.promo-button:disabled):hover::before,
-.promo-button:not(.promo-button:disabled):focus::before{
+.promo-button:not(.promo-button:disabled):focus::before {
   background-color: var(--color-extra-dark);
 }
 
@@ -835,13 +841,19 @@ body {
   opacity: 0.4;
 }
 
+.slider-footer {
+  display: flex;
+  justify-content: space-between;
+}
+
 .slider-switcher {
   display: flex;
+  align-items: flex-end;
 }
 
 .slider-switch {
-  width: 11px;
-  height: 11px;
+  width: 12px;
+  height: 12px;
   background-color: var(--color-ghost);
   border: 1px solid transparent;
   border-radius: 50%;
@@ -922,7 +934,7 @@ body {
 }
 
 .presents {
-  padding-top: 95px;
+  padding-top: 81px;
 }
 
 .presents-title {
@@ -981,7 +993,7 @@ body {
 }
 
 .popular {
-  padding-top: 86px;
+  padding-top: 81px;
 }
 
 .popular-title {
@@ -999,7 +1011,7 @@ body {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(270px, 270px));
   justify-content: center;
-  grid-gap: 40px 30px;
+  grid-gap: 41px 30px;
 }
 
 .product-img {
@@ -1015,13 +1027,14 @@ body {
 
 .product-content {
   background-color: var(--color-extra-light);
-  padding: 133px 40px 19px;
+  padding: 133px 40px 23px;
   border-radius: 8px;
 }
 
 .product-description {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .product-button {
@@ -1061,8 +1074,13 @@ body {
 }
 
 .product-about {
-  margin: 0 0 20px;
+  margin: 0 0 15px;
   text-align: center;
+}
+
+.product-about--thrash {
+  max-width: 150px;
+  margin: 0 auto 15px;
 }
 
 .product-price {
@@ -1073,8 +1091,14 @@ body {
   margin: 0;
 }
 
+.product-price span {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 7px;
+}
+
 .manufacture {
-  padding-top: 66px;
+  padding-top: 81px;
 }
 
 .manufacture-block {
@@ -1093,7 +1117,7 @@ body {
 }
 
 .manufacture-title {
-  margin: 0 auto 55px;
+  margin: 0 auto 56px;
   text-align: center;
   max-width: 995px;
 }
@@ -1146,7 +1170,7 @@ body {
 
 .blog {
   display: flex;
-  padding-top: 80px;
+  padding-top: 82px;
 }
 
 .new {
@@ -1189,11 +1213,11 @@ body {
 .subscription-content {
   background-color: var(--color-extra-light);
   border-radius: 16px;
-  padding: 26px 15px 23px 26px;
+  padding: 26px 24px 25px 26px;
 }
 
 .subscription-content>p {
-  margin: 0 0 39px;
+  margin: 0 0 43px;
 }
 
 .subscription-form {
@@ -1226,25 +1250,25 @@ body {
 }
 
 .delivery-title {
-  margin: 0 0 24px;
+  margin: 0 0 23px;
 }
 
 .feedback {
   max-width: 500px;
   background-color: var(--color-extra-light);
   border-radius: 8px;
-  padding: 40px;
+  padding: 41px;
 }
 
 .feedback>p {
-  margin-bottom: 30px;
+  margin-bottom: 32px;
 }
 
 .form-list {
   display: grid;
   grid-template-columns: 114px 288px;
-  gap: 16px;
-  margin-bottom: 30px;
+  gap: 22px 18px;
+  margin-bottom: 34px;
 }
 
 .field-input {
@@ -1255,8 +1279,8 @@ body {
   color: var(--color-extra-dark);
   display: block;
   width: 100%;
-  height: 48px;
-  padding: 0 15px;
+  height: 46px;
+  padding: 0 16px;
   border: none;
   outline: 1px solid #b9b9b9;
   border-radius: 4px;
@@ -1353,7 +1377,7 @@ body {
 }
 
 .contacts {
-  padding-top: 80px;
+  padding-top: 81px;
 }
 
 .contacts-content {
@@ -1392,24 +1416,26 @@ body {
 
 .office-text {
   margin: 0 0 12px;
+  max-width: 205px;
 }
 
 .office-time {
   font-size: 14px;
   line-height: 20px;
-  margin: 0 0 32px;
+  margin: 0 0 33px;
 }
 
 .office-feedback {
   display: block;
   text-decoration: none;
+  max-width: 250px;
 }
 
 .page-footer {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  padding-top: 49px;
+  padding: 49px 43px 49px 34px;
   align-items: flex-start;
 }
 
@@ -1417,7 +1443,8 @@ body {
   display: grid;
   grid-template-columns: auto auto;
   justify-content: center;
-  grid-gap: 8px 10px;
+  grid-gap: 8px 24px;
+  margin-left: 124px;
 }
 
 .info-link {
@@ -1440,7 +1467,7 @@ body {
   position: absolute;
   top: 50%;
   transform: translate(-50%, -50%);
-  left: -19px;
+  left: -16px;
   background-color: var(--color-extra-dark);
   mask: url("../img/footer/icon-heart.svg") no-repeat center/cover;
   -webkit-mask: url("../img/footer/icon-heart.svg") no-repeat center/cover;
@@ -1450,10 +1477,26 @@ body {
   font-size: 12px;
   line-height: 16px;
   color: var(--color-extra-dark);
+  margin: 0;
+}
+
+.author-logo {
+  display: block;
+  margin-bottom: 14px;
+}
+
+.author-logo img {
+  display: block;
+  width: 93px;
+  height: 27px;
 }
 
 .author-link {
   color: var(--color-extra-dark);
+}
+
+.author-info {
+  min-width: 194px;
 }
 
 .breadcrumbs {
@@ -1798,7 +1841,7 @@ body {
 .pages {
   display: flex;
   flex-wrap: wrap;
-  padding-top: 56px;
+  padding-top: 58px;
   position: relative;
   padding-bottom: 81px;
 }
@@ -1810,7 +1853,7 @@ body {
 }
 
 .show-more {
-  margin: 0 auto 0 42%;
+  margin: 0 auto 0 42.2%;
 }
 
 .pagination-button {
@@ -1865,11 +1908,11 @@ body {
 
 .pagination-arrow--early {
   transform: rotate(180deg);
-  margin-right: 12px;
+  margin-right: 17px;
 }
 
 .pagination-arrow--next {
-  margin-left: 18px;
+  margin-left: 19px;
 }
 
 .pages::before {

@@ -1,24 +1,28 @@
-const promo = document.querySelector('.promo');
+if (document.querySelector(".promo")) {
+  promo();
+  modal();
+}
 
-if (promo) {
-  const siteBackground = document.querySelector('body');
-  const slideList = promo.querySelectorAll('.slide');
-  const buttonBackwards = promo.querySelector('#buttonSliderLeft');
-  const buttonForwards = promo.querySelector('#buttonSliderRight');
-  const switcher = promo.querySelector('.slider-switcher');
-  const switcherList = switcher.querySelectorAll('.slider-switch');
-  const BG_COLORS = ['#feafc3', '#69a9ff', '#fcc850'];
-  const previews = promo.querySelectorAll('.slider-preview');
+function promo() {
+  const promo = document.querySelector(".promo");
+  const siteBackground = document.querySelector("body");
+  const slideList = promo.querySelectorAll(".slide");
+  const buttonBackwards = promo.querySelector("#buttonSliderLeft");
+  const buttonForwards = promo.querySelector("#buttonSliderRight");
+  const switcher = promo.querySelector(".slider-switcher");
+  const switcherList = switcher.querySelectorAll(".slider-switch");
+  const BG_COLORS = ["#feafc3", "#69a9ff", "#fcc850"];
+  const previews = promo.querySelectorAll(".slider-preview");
 
   let counter = 0;
   let slideNumber = slideList.length - 1;
 
   function slideUpdater(type) {
-    const activeSlide = promo.querySelector('.slide--active');
-    const activeSwitcher = switcher.querySelector('.slider-switch--active');
-    const hiddenPreview = promo.querySelector('.slider-preview--inactive');
+    const activeSlide = promo.querySelector(".slide--active");
+    const activeSwitcher = switcher.querySelector(".slider-switch--active");
+    const hiddenPreview = promo.querySelector(".slider-preview--inactive");
 
-    if (type == 'forwards') {
+    if (type == "forwards") {
       if (counter == slideNumber) {
         counter = 0;
       } else {
@@ -26,7 +30,7 @@ if (promo) {
       }
     }
 
-    if (type == 'backwards') {
+    if (type == "backwards") {
       if (counter == 0) {
         counter = slideNumber;
       } else {
@@ -34,21 +38,21 @@ if (promo) {
       }
     }
 
-    activeSwitcher.classList.remove('slider-switch--active');
-    activeSlide.classList.remove('slide--active');
-    hiddenPreview.classList.remove('slider-preview--inactive');
-    previews[counter].classList.add('slider-preview--inactive');
-    slideList[counter].classList.add('slide--active');
-    switcherList[counter].classList.add('slider-switch--active');
+    activeSwitcher.classList.remove("slider-switch--active");
+    activeSlide.classList.remove("slide--active");
+    hiddenPreview.classList.remove("slider-preview--inactive");
+    previews[counter].classList.add("slider-preview--inactive");
+    slideList[counter].classList.add("slide--active");
+    switcherList[counter].classList.add("slider-switch--active");
     siteBackground.style.backgroundColor = BG_COLORS[counter];
   }
 
   function buttonForwardsClickHandler(e) {
-    slideUpdater('forwards');
+    slideUpdater("forwards");
   }
 
   function buttonBackwardsClickHandler(e) {
-    slideUpdater('backwards');
+    slideUpdater("backwards");
   }
 
   function switchClickHandler(e) {
@@ -57,11 +61,11 @@ if (promo) {
   }
 
   for (let i = 0; i < switcherList.length; i++) {
-    switcherList[i].addEventListener('click', switchClickHandler);
+    switcherList[i].addEventListener("click", switchClickHandler);
   }
 
-  buttonBackwards.addEventListener('click', buttonBackwardsClickHandler);
-  buttonForwards.addEventListener('click', buttonForwardsClickHandler);
+  buttonBackwards.addEventListener("click", buttonBackwardsClickHandler);
+  buttonForwards.addEventListener("click", buttonForwardsClickHandler);
 }
 
 function modal() {
@@ -76,7 +80,10 @@ function modal() {
   }
 
   function closeModalOnClick(e) {
-    if (!e.target.closest(".modal-window") && !e.target.closest(".office-feedback")) {
+    if (
+      !e.target.closest(".modal-window") &&
+      !e.target.closest(".office-feedback")
+    ) {
       modalClose();
     }
   }
@@ -98,4 +105,27 @@ function modal() {
 
   contactsButton.addEventListener("click", showModal);
 }
-modal()
+
+function searchInput() {
+  const searchForm = document.querySelector(".search-form");
+  const searchInput = searchForm.querySelector("#search");
+  const crossButton = searchForm.querySelector(".cross-button--search");
+
+  function removeValue() {
+    searchInput.value = "";
+    crossButton.classList.remove("cross-button--show");
+  }
+
+  function checkInputValue() {
+    if (this.value != "") {
+      crossButton.classList.add("cross-button--show");
+      crossButton.addEventListener("click", removeValue);
+    } else {
+      crossButton.classList.remove("cross-button--show");
+    }
+  }
+
+  searchInput.addEventListener("input", checkInputValue);
+}
+
+searchInput();
