@@ -45,6 +45,35 @@ function promo() {
     slideList[counter].classList.add("slide--active");
     switcherList[counter].classList.add("slider-switch--active");
     siteBackground.style.backgroundColor = BG_COLORS[counter];
+
+    function icecreamReplacer() {
+      const wrapper = promo.querySelector(".slider-cover");
+      const raspberry = previews[0];
+      const banana = previews[1];
+      const marshmallow = previews[previews.length - 1];
+
+      function defaultSlidesPosition() {
+        wrapper.insertAdjacentElement("afterbegin", raspberry);
+        raspberry.insertAdjacentElement("afterend", banana);
+        wrapper.insertAdjacentElement("beforeend", marshmallow);
+      }
+
+      function customSlidesPosition() {
+        wrapper.insertAdjacentElement("afterbegin", marshmallow);
+        raspberry.insertAdjacentElement("afterend", banana);
+        wrapper.insertAdjacentElement("beforeend", raspberry);
+      }
+
+      if (counter == 0) {
+        defaultSlidesPosition();
+      } else if (counter == 1) {
+        customSlidesPosition();
+      } else if (counter == 2) {
+        defaultSlidesPosition();
+      }
+    }
+
+    icecreamReplacer();
   }
 
   function buttonForwardsClickHandler(e) {

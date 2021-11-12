@@ -4,6 +4,8 @@
 <head>
   <meta charset="utf-8">
   <title>Каталог</title>
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32.png">
   <link rel="stylesheet" href="css/styles.css">
 </head>
 
@@ -56,7 +58,7 @@
                   <label class="field-label visually-hidden" for="search">Поиск</label>
                   <input class="field-input field-input--search" type="search" placeholder="Поиск по сайту" id="search"
                     name="search">
-                  <button class="cross-button cross-button--search" type="button">
+                  <button class="cross-button cross-button--search" type="button" aria-label="Удалить текст">
                     <span></span>
                     <span></span>
                   </button>
@@ -74,8 +76,7 @@
                 <form class="login-form" action="https://echo.htmlacademy.ru/" method="GET">
                   <div class="field">
                     <label class="field-label visually-hidden" for="login">Email</label>
-                    <input class="field-input" type="email" placeholder="email@example.com
-                    " id="login" name="login">
+                    <input class="field-input" type="email" placeholder="email@example.com" id="login" name="login">
                   </div>
                   <div class="field">
                     <label class="field-label visually-hidden" for="password">Пароль</label>
@@ -114,7 +115,7 @@
                           </div>
                         </div>
                         <p class="goods-price">310 ₽</p>
-                        <button class="cross-button goods-button" type="button">
+                        <button class="cross-button goods-button" type="button" aria-label="Удалить продукт">
                           <span></span>
                           <span></span>
                         </button>
@@ -130,7 +131,7 @@
                           </div>
                         </div>
                         <p class="goods-price">480 ₽</p>
-                        <button class="cross-button goods-button" type="button">
+                        <button class="cross-button goods-button" type="button"aria-label="Удалить продукт">
                           <span></span>
                           <span></span>
                         </button>
@@ -198,7 +199,7 @@
               <div class="price">
                 <p>Цена:
                   <label class="catalog-filter-label">
-                    <input class="catalog-filter-input" type="text" name="min-price" value="100">₽-
+                    <input class="catalog-filter-input" type="text" name="min-price" value="100">₽ –
                   </label>
                   <label class="catalog-filter-label">
                     <input class="catalog-filter-input" type="text" name="max-price" value="500">₽

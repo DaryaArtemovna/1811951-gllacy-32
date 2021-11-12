@@ -4,6 +4,8 @@
 <head>
   <meta charset="utf-8">
   <title>Глейси</title>
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32.png">
   <link rel="stylesheet" href="css/styles.css">
 </head>
 
@@ -56,7 +58,7 @@
                   <label class="field-label visually-hidden" for="search">Поиск</label>
                   <input class="field-input field-input--search" type="search" placeholder="Поиск по сайту" id="search"
                     name="search">
-                  <button class="cross-button cross-button--search" type="button">
+                  <button class="cross-button cross-button--search" type="button" aria-label="Удалить текст">
                     <span></span>
                     <span></span>
                   </button>
@@ -74,15 +76,14 @@
                 <form class="login-form" action="https://echo.htmlacademy.ru/" method="GET">
                   <div class="field">
                     <label class="field-label visually-hidden" for="login">Email</label>
-                    <input class="field-input" type="email" placeholder="email@example.com
-                    " id="login" name="login">
+                    <input class="field-input" type="email" placeholder="email@example.com" id="login" name="login">
                   </div>
                   <div class="field">
                     <label class="field-label visually-hidden" for="password">Пароль</label>
                     <input class="field-input" type="password" placeholder="••••••" id="password" name="password">
                   </div>
                   <div class="login-footer">
-                    <button class="button button--red" type="button">Войти</button>
+                    <button class="button button--red" type="submit">Войти</button>
                     <div class="check-in">
                       <a href="#">Забыли пароль?</a>
                       <a href="#">Регистрация</a>
@@ -114,7 +115,7 @@
                           </div>
                         </div>
                         <p class="goods-price">310 ₽</p>
-                        <button class="cross-button goods-button" type="button">
+                        <button class="cross-button goods-button" type="button" aria-label="Удалить продукт">
                           <span></span>
                           <span></span>
                         </button>
@@ -130,7 +131,7 @@
                           </div>
                         </div>
                         <p class="goods-price">480 ₽</p>
-                        <button class="cross-button goods-button" type="button">
+                        <button class="cross-button goods-button" type="button" aria-label="Удалить продукт">
                           <span></span>
                           <span></span>
                         </button>
@@ -194,9 +195,8 @@
               <div class="slide slide--marshmallow">
                 <div class="slide-text">
                   <p class="slide-name">Карамельный пломбир с маршмеллоу</p>
-                  <p class="slide-description">Необычный сладкий дессерт с карамельный топпингом и кусочками зефира
-                    завоюет
-                    сердца сладкоежек всех возрастов.</p>
+                  <p class="slide-description">Необычный сладкий десерт с карамельным топпингом и кусочками зефира
+                    завоюет сердца сладкоежек всех возрастов.</p>
                   <a class="slide-button button" href="#">
                     Заказать
                   </a>
@@ -227,9 +227,9 @@
         </div>
         <div class="slider-footer">
           <div class="slider-switcher">
-            <button class="slider-switch slider-switch--active" id="switch-1" type="button"></button>
-            <button class="slider-switch" type="button" id="switch-2"></button>
-            <button class="slider-switch" type="button" id="switch-3"></button>
+            <button class="slider-switch slider-switch--active" id="switch-1" type="button" aria-label="Перейти к первому слайду"></button>
+            <button class="slider-switch" type="button" id="switch-2" aria-label="Перейти к второму слайду"></button>
+            <button class="slider-switch" type="button" id="switch-3" aria-label="Перейти к третьему слайду"></button>
           </div>
           <div class="socials">
             <a class="socials-link socials-link--vk" href="https://twitter.com/htmlacademy_ru"
@@ -240,7 +240,6 @@
               aria-label="Инстаграм"></a>
           </div>
         </div>
-      </div>
       </div>
     </section>
 
@@ -268,8 +267,8 @@
           </h3>
           <div class="offer-text">
             <p class="offer-name">Маршмеллоу даром!</p>
-            <p class="offer-description">При покупке 2 кг пломбира добавим в&nbspваш заказ упаковку нежных
-              зефирок&nbspсовершенно бесплатно.</p>
+            <p class="offer-description">При покупке 2 кг пломбира добавим в&nbsp;ваш заказ упаковку нежных
+              зефирок&nbsp;совершенно бесплатно.</p>
             <a class="offer-link button button--loadin" href="#">
               Хочу подарок
             </a>
@@ -315,7 +314,7 @@
             <h3 class="product-title">
               Черника
             </h3>
-            <p class="product-about">Крем-брюле с&nbspчерничным джемом</p>
+            <p class="product-about">Крем-брюле с&nbsp;черничным джемом</p>
             <div class="product-description">
               <p class="product-price"><span>330</span>₽/кг</p>
               <button class="product-button" type="button" aria-label="Добавить в корзину"></button>
@@ -328,7 +327,7 @@
             <h3 class="product-title">
               Бабл-гам
             </h3>
-            <p class="product-about">Ванильный пломбир со&nbspсладкой посыпкой</p>
+            <p class="product-about">Ванильный пломбир со&nbsp;сладкой посыпкой</p>
             <div class="product-description">
               <p class="product-price"><span>320</span>₽/кг</p>
               <button class="product-button" type="button" aria-label="Добавить в корзину"></button>
@@ -372,7 +371,7 @@
         <p class="new-info">Новое в нашем блоге</p>
         <a class="new-link" href="#">
           <h3 class="new-title">
-            10 способов сервировки фруктовых щербетов к&nbspстолу
+            10 способов сервировки фруктовых щербетов к&nbsp;столу
           </h3>
         </a>
       </div>
@@ -382,7 +381,7 @@
         </h3>
         <div class="subscription-content">
           <p>Подпишитесь на нашу сладкую рассылку и будьте всегда
-            в&nbspкурсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной
+            в&nbsp;курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной
             ерунды.
             Честно =)</p>
           <form class="subscription-form" action="https://echo.htmlacademy.ru/" method="GET">
@@ -502,7 +501,7 @@
 
   <div class="modal" id="modalContacts">
     <div class="modal-window">
-      <button class="cross-button cross-button--modal" type="button">
+      <button class="cross-button cross-button--modal " type="button" aria-label="Закрыть окно">
         <span></span>
         <span></span>
       </button>
@@ -527,8 +526,8 @@
               <label class="field-label visually-hidden" for="modal-text">
                 В свободной форме
               </label>
-              <textarea class="field-input field-input--text" placeholder="В свободной форме"
-                id="modal-text" name="modal-text"></textarea>
+              <textarea class="field-input field-input--text" placeholder="В свободной форме" id="modal-text"
+                name="modal-text"></textarea>
             </li>
           </ul>
           <button class="button button--red modal-submit" type="submit">
