@@ -369,14 +369,15 @@ body {
   margin: 0 0 31px;
   font-size: 24px;
   line-height: 30px;
+  font-weight: 700;
 }
 
 .login-form .field:not(:last-child) {
-  margin-bottom: 16px;
+  margin-bottom: 18px;
 }
 
-.login-form .field:last-child {
-  margin-bottom: 28px;
+.login-form .field:nth-child(2) {
+  margin-bottom: 33px;
 }
 
 .login-footer {
@@ -386,7 +387,7 @@ body {
 .login-footer button {
   margin-right: 22px;
   width: 115px;
-  padding: 12px 29px;
+  padding: 12px 33px;
 }
 
 .check-in a {
@@ -527,8 +528,8 @@ body {
 }
 
 .cart-list {
-  padding-bottom: 31px;
-  margin-bottom: 28px;
+  padding-bottom: 30px;
+  margin-bottom: 30px;
   border-bottom: 1px solid #e7e7e7;
 }
 
@@ -599,7 +600,7 @@ body {
   line-height: 22px;
   font-weight: 700;
   color: var(--color-extra-dark);
-  margin: 5px 0 0 0;
+  margin: 6px 2px 0 0;
 }
 
 .interaction-link::before {
@@ -1621,6 +1622,7 @@ body {
   padding: 0;
   border: none;
   background-color: transparent;
+  color: var(--color-extra-dark);
 }
 
 .range {
