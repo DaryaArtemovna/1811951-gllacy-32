@@ -131,24 +131,31 @@ body {
   outline-color: var(--color-extra-bright);
 }
 
-.product-button:hover {
+.product-button:hover:not(.product-button:disabled) {
   background-color: var(--color-ghost);
   outline: 2px solid var(--color-extra-bright);
 }
 
-.product-button:hover:not(:focus):before {
+.product-button:hover:not(:focus):not(.product-button:disabled)::before {
   background-color: var(--color-extra-dark);
 }
 
+.product-button:disabled {
+  background-color: var(--color-basic-neutral);
+}
+
+.product-button:disabled::before {
+  background-color: var(--color-basic-dark);
+}
+
 .button--red:focus,
-.product-button:focus {
+.product-button:focus:not(.product-button:disabled) {
   color: var(--color-extra-light);
   background-color: var(--color-extra-bright);
   outline: 2px solid var(--color-extra-dark);
 }
 
-.button--red:disabled,
-.product-button:disabled {
+.button--red:disabled {
   color: var(--color-basic-dark);
   background-color: var(--color-basic-neutral);
   outline: 4px solid var(--color-disabled);
@@ -237,6 +244,7 @@ body {
 .navigation-list {
   display: flex;
   flex-wrap: wrap;
+  max-width: 590px;
 }
 
 .interaction {
@@ -880,8 +888,10 @@ body {
 }
 
 .socials {
-  display: flex;
-  justify-content: flex-end;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(24px, 24px));
+  gap: 16px 16px;
+  max-width: 111px;
 }
 
 .socials-link {
@@ -1218,7 +1228,7 @@ body {
   padding: 26px 24px 25px 26px;
 }
 
-.subscription-content>p {
+.subscription-content > p {
   margin: 0 0 43px;
 }
 
@@ -1262,7 +1272,7 @@ body {
   padding: 41px;
 }
 
-.feedback>p {
+.feedback > p {
   margin-bottom: 32px;
 }
 
@@ -1282,7 +1292,7 @@ body {
   display: block;
   width: 100%;
   height: 46px;
-  padding: 0 16px;
+  padding: 0 14px 0 16px;
   border: none;
   outline: 1px solid #b9b9b9;
   border-radius: 4px;
@@ -1298,16 +1308,16 @@ body {
   outline: 2px solid var(--color-extra-dark);
 }
 
-.field-input:invalid {
+.field-input--error {
   outline: 1px solid #EA5454;
 }
 
-.field-input:hover:invalid {
+.field-input--error:hover {
   outline: 2px solid #EA5454;
 }
 
 .field-input:disabled {
-  background-color: var(--color-basic-neutral);
+  background-color: #e7e7e7;
 }
 
 .field-input:disabled::placeholder {
@@ -1447,6 +1457,7 @@ body {
   justify-content: center;
   grid-gap: 8px 24px;
   margin-left: 124px;
+  width: 365px;
 }
 
 .info-link {
@@ -1578,13 +1589,10 @@ body {
 }
 
 .filter-header {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 195px 198px 366px;
+  gap: 24px;
   margin-bottom: 15px;
-}
-
-.filter-field:not(:last-child) {
-  margin-right: 24px;
 }
 
 .filter-label {
@@ -1715,7 +1723,6 @@ body {
 
 .catalog-filter-item input:checked~.control::before {
   background-image: radial-gradient(var(--color-extra-dark) 0, var(--color-extra-dark) 3px, transparent 3px, transparent 100%);
-  ;
 }
 
 .catalog-filter-item:not(:last-child) {
@@ -1810,13 +1817,10 @@ body {
 }
 
 .filter-footer {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: flex-end;
-}
-
-.filter-footer .catalog-filter-list {
-  margin-right: 24px;
+  display: grid;
+  grid-template-columns: 596px 190px;
+  gap: 23px;
+  align-items: end;
 }
 
 .filter-footer .catalog-filter-item:not(:last-child) {
@@ -1843,6 +1847,7 @@ body {
   border: 2px solid var(--color-extra-light);
   border-radius: 20px;
   width: 190px;
+  height: 36px;
   padding: 6px;
   transition: all 0.3s;
   cursor: pointer;
@@ -1977,7 +1982,7 @@ body {
   position: relative;
   width: 570px;
   height: 545px;
-  padding: 64px 61px 64px 64px;
+  padding: 64px;
   border-radius: 8px;
   background-color: var(--color-extra-light);
   box-shadow: 0 15px 40px #2d34401f;
@@ -1986,9 +1991,9 @@ body {
 .cross-button--modal {
   position: absolute;
   top: 35px;
-  right: 36px;
-  width: 12px;
-  height: 12px;
+  right: 35px;
+  width: 14px;
+  height: 14px;
 }
 
 .cross-button--modal span {
@@ -2000,11 +2005,15 @@ body {
   line-height: 30px;
   font-weight: 700;
   color: var(--color-extra-dark);
-  margin: 0 0 32px;
+  margin: 0 0 33px;
 }
 
 .modal-list {
-  margin-bottom: 24px;
+  margin-bottom: 34px;
+}
+
+.modal-list input {
+  margin-bottom: 18px;
 }
 
 .modal-list li:not(:last-child) {
@@ -2012,14 +2021,14 @@ body {
 }
 
 .field-input--text {
-  height: 149px;
+  height: 147px;
   resize: none;
   padding-top: 14px;
   padding-bottom: 14px;
 }
 
 .modal-submit {
-  width: 152px;
+  width: 148px;
   padding: 10px;
   margin-left: auto;
 }

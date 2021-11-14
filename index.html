@@ -55,6 +55,7 @@
             <div class="popup-content">
               <form class="search-form" action="https://echo.htmlacademy.ru/" method="GET">
                 <div class="field">
+                  <!--Для состояния поля "Ошибка" и "Ошибка и наведение" в input добавляется класс .field-input--error -->
                   <label class="field-label visually-hidden" for="search">Поиск</label>
                   <input class="field-input field-input--search" type="search" placeholder="Поиск по сайту" id="search"
                     name="search">
@@ -227,7 +228,8 @@
         </div>
         <div class="slider-footer">
           <div class="slider-switcher">
-            <button class="slider-switch slider-switch--active" id="switch-1" type="button" aria-label="Перейти к первому слайду"></button>
+            <button class="slider-switch slider-switch--active" id="switch-1" type="button"
+              aria-label="Перейти к первому слайду"></button>
             <button class="slider-switch" type="button" id="switch-2" aria-label="Перейти к второму слайду"></button>
             <button class="slider-switch" type="button" id="switch-3" aria-label="Перейти к третьему слайду"></button>
           </div>
@@ -501,7 +503,7 @@
 
   <div class="modal" id="modalContacts">
     <div class="modal-window">
-      <button class="cross-button cross-button--modal " type="button" aria-label="Закрыть окно">
+      <button class="cross-button cross-button--modal" type="button" aria-label="Закрыть окно">
         <span></span>
         <span></span>
       </button>
