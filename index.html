@@ -58,7 +58,7 @@
                   <!--Для состояния поля "Ошибка" и "Ошибка и наведение" в input добавляется класс .field-input--error -->
                   <label class="field-label visually-hidden" for="search">Поиск</label>
                   <input class="field-input field-input--search" type="search" placeholder="Поиск по сайту" id="search"
-                    name="search">
+                    name="search" required>
                   <button class="cross-button cross-button--search" type="button" aria-label="Удалить текст">
                     <span></span>
                     <span></span>
@@ -71,78 +71,76 @@
         <div class="interaction-item">
           <a class="interaction-link interaction-link--login" href="#">Вход</a>
           <div class="popup">
-            <div class="popup-content">
-              <div class="login">
-                <h3 class="login-title title">Личный кабинет</h3>
-                <form class="login-form" action="https://echo.htmlacademy.ru/" method="GET">
-                  <div class="field">
-                    <label class="field-label visually-hidden" for="login">Email</label>
-                    <input class="field-input" type="email" placeholder="email@example.com" id="login" name="login">
+            <div class="popup-content login">
+              <p class="login-title title">Личный кабинет</p>
+              <form class="login-form" action="https://echo.htmlacademy.ru/" method="GET">
+                <div class="field">
+                  <label class="field-label visually-hidden" for="login">Email</label>
+                  <input class="field-input" type="email" placeholder="email@example.com" id="login" name="login"
+                    required>
+                </div>
+                <div class="field">
+                  <label class="field-label visually-hidden" for="password">Пароль</label>
+                  <input class="field-input" type="password" placeholder="••••••" id="password" name="password"
+                    required>
+                </div>
+                <div class="login-footer">
+                  <button class="button button--red" type="submit">Войти</button>
+                  <div class="check-in">
+                    <a href="#">Забыли пароль?</a>
+                    <a href="#">Регистрация</a>
                   </div>
-                  <div class="field">
-                    <label class="field-label visually-hidden" for="password">Пароль</label>
-                    <input class="field-input" type="password" placeholder="••••••" id="password" name="password">
-                  </div>
-                  <div class="login-footer">
-                    <button class="button button--red" type="submit">Войти</button>
-                    <div class="check-in">
-                      <a href="#">Забыли пароль?</a>
-                      <a href="#">Регистрация</a>
-                    </div>
-                  </div>
-                </form>
-              </div>
+                </div>
+              </form>
             </div>
           </div>
         </div>
         <div class="interaction-item">
           <a class="interaction-link interaction-link--cart" href="#" aria-label="Корзина">Пусто</a>
           <div class="popup">
-            <div class="popup-content">
-              <div class="cart cart--empty">
-                <div class="cart-text">
-                  <p>Ваша корзина пока пуста</p>
-                </div>
-                <div class="cart-product">
-                  <h3 class="title cart-title">Корзина</h3>
-                  <ul class="cart-list list-default">
-                    <li class="cart-item">
-                      <div class="goods">
-                        <div class="goods-content">
-                          <img src="img/catalog/goods-1.jpg" alt="Малинка" width="46" height="48">
-                          <div class="goods-text">
-                            <p>Малинка</p>
-                            <p>1 кг х 310 ₽</p>
-                          </div>
+            <div class="popup-content cart cart--empty">
+              <div class="cart-text">
+                <p>Ваша корзина пока пуста</p>
+              </div>
+              <div class="cart-product">
+                <p class="title cart-title">Корзина</p>
+                <ul class="cart-list list-default">
+                  <li class="cart-item">
+                    <div class="goods">
+                      <div class="goods-content">
+                        <img src="img/catalog/goods-1.jpg" alt="Малинка" width="46" height="48">
+                        <div class="goods-text">
+                          <p>Малинка</p>
+                          <p>1 кг х 310 ₽</p>
                         </div>
-                        <p class="goods-price">310 ₽</p>
-                        <button class="cross-button goods-button" type="button" aria-label="Удалить продукт">
-                          <span></span>
-                          <span></span>
-                        </button>
                       </div>
-                    </li>
-                    <li class="cart-item">
-                      <div class="goods">
-                        <div class="goods-content">
-                          <img src="img/catalog/goods-4.jpg" alt="Бабл-гам" width="46" height="48">
-                          <div class="goods-text">
-                            <p>Бабл-гам</p>
-                            <p>1,5 кг х 320 ₽</p>
-                          </div>
+                      <p class="goods-price">310 ₽</p>
+                      <button class="cross-button goods-button" type="button" aria-label="Удалить продукт">
+                        <span></span>
+                        <span></span>
+                      </button>
+                    </div>
+                  </li>
+                  <li class="cart-item">
+                    <div class="goods">
+                      <div class="goods-content">
+                        <img src="img/catalog/goods-4.jpg" alt="Бабл-гам" width="46" height="48">
+                        <div class="goods-text">
+                          <p>Бабл-гам</p>
+                          <p>1,5 кг х 320 ₽</p>
                         </div>
-                        <p class="goods-price">480 ₽</p>
-                        <button class="cross-button goods-button" type="button" aria-label="Удалить продукт">
-                          <span></span>
-                          <span></span>
-                        </button>
                       </div>
-                    </li>
-                  </ul>
-                  <div class="cart-footer">
-                    <a class="button button--red" href="#">Оформить заказ</a>
-                    <p>Итого:<span> 790</span> ₽</p>
-                  </div>
+                      <p class="goods-price">480 ₽</p>
+                      <button class="cross-button goods-button" type="button" aria-label="Удалить продукт">
+                        <span></span>
+                        <span></span>
+                      </button>
+                    </div>
+                  </li>
+                </ul>
+                <div class="cart-footer">
+                  <a class="button button--red" href="#">Оформить заказ</a>
+                  <p>Итого:<span> 790</span> ₽</p>
                 </div>
               </div>
             </div>
@@ -391,7 +389,7 @@
               <label class="field-label visually-hidden" for="email">
                 Ввод email
               </label>
-              <input class="field-input" type="email" placeholder="email@example.com" id="email" name="email">
+              <input class="field-input" type="email" placeholder="email@example.com" id="email" name="email" required>
               <span class="field-info">Подпись</span>
             </div>
             <button class="button button--red" type="submit">
@@ -420,14 +418,14 @@
                   Дата
                   <span class="field-tooltip">Введите дату жизни</span>
                 </label>
-                <input class="field-input" type="text" placeholder="01.04.2020" id="date" name="date">
+                <input class="field-input" type="text" placeholder="01.04.2020" id="date" name="date" required>
                 <span class="field-info">Подпись</span>
               </li>
               <li class="field">
                 <label class="field-label" for="tel">
                   Телефон
                 </label>
-                <input class="field-input" type="tel" placeholder="+7 800 999-00-00" id="tel" name="tel">
+                <input class="field-input" type="tel" placeholder="+7 800 999-00-00" id="tel" name="tel" required>
               </li>
               <li class="field">
                 <label class="field-label field-label--help" for="location">
@@ -435,7 +433,7 @@
                   <span class="field-tooltip">Введите название улицы, дома и квартиры</span>
                 </label>
                 <input class="field-input" type="text" placeholder="ул. Большая Конюшенная, 19/8" id="location"
-                  name="adress">
+                  name="adress" required>
                 <span class="field-info">Подпись</span>
               </li>
             </ul>
@@ -515,14 +513,15 @@
               <label class="field-label visually-hidden" for="modal-name">
                 Имя и фамилия
               </label>
-              <input class="field-input" type="text" placeholder="Имя и фамилия" id="modal-name" name="modal-name">
+              <input class="field-input" type="text" placeholder="Имя и фамилия" id="modal-name" name="modal-name"
+                required>
             </li>
             <li class="field">
               <label class="field-label visually-hidden" for="modal-email">
                 email@example.com
               </label>
               <input class="field-input" type="email" placeholder="email@example.com" id="modal-email"
-                name="modal-email">
+                name="modal-email" required>
             </li>
             <li class="field">
               <label class="field-label visually-hidden" for="modal-text">
